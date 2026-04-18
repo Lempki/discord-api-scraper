@@ -1,6 +1,6 @@
 # discord-api-scraper
 
-This is a REST API that performs web scraping on behalf of Discord bots. It accepts a URL and a set of CSS or XPath selectors, runs a [Scrapy](https://scrapy.org/) spider in an isolated subprocess, and returns structured data as JSON. Bots call this API to retrieve content from external websites such as news feeds, game scores, or any other structured page without bundling a scraping stack locally.
+This is a REST API that performs web scraping on behalf of Discord bots. It accepts a URL and a set of CSS or XPath selectors, runs a [Scrapy](https://scrapy.org/) spider in an isolated subprocess, and returns structured data as JSON. Bots call this API to retrieve content from external websites such as news feeds, game scores, or any other structured page without bundling a scraping stack locally. This project is based on the [discord-api-template](https://github.com/Lempki/discord-api-template) repository, which provides the core architecture.
 
 ## Endpoints
 
