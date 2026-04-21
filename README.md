@@ -17,10 +17,10 @@ All endpoints except `/health` require a bearer token in the `Authorization` hea
 
 ```json
 {
-  "url": "https://yle.fi/uutiset",
+  "url": "https://www.scrapethissite.com/pages/simple/",
   "selectors": {
-    "title": "h3.card__heading",
-    "link": "a.card__link[href]"
+    "name": "h3.country-name",
+    "capital": ".country-capital"
   },
   "selector_type": "css",
   "follow_links": false,
@@ -43,11 +43,11 @@ Returns the job status and, once complete, the scraped items.
 {
   "job_id": "...",
   "status": "complete",
-  "url": "https://yle.fi/uutiset",
+  "url": "https://www.scrapethissite.com/pages/simple/",
   "scraped_at": "2026-04-18T14:30:00",
   "item_count": 12,
   "items": [
-    { "title": ["Uutinen 1"], "link": ["/uutiset/3-12345"] }
+    { "name": ["Andorra"], "capital": ["Andorra la Vella"] }
   ]
 }
 ```
