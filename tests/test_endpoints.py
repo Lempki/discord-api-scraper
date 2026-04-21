@@ -1,15 +1,11 @@
+import os
+
 import pytest
 from fastapi.testclient import TestClient
 
-from scraper_api.main import app
-from scraper_api.config import get_settings, Settings
+os.environ.setdefault("DISCORD_API_SECRET", "test-secret")
 
-
-def _override_settings():
-    return Settings(discord_api_secret="test-secret")
-
-
-app.dependency_overrides[get_settings] = _override_settings
+from scraper_api.main import app  # noqa: E402
 
 client = TestClient(app)
 AUTH = {"Authorization": "Bearer test-secret"}
