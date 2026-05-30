@@ -54,7 +54,7 @@ if not exist ".env" (
 echo.
 echo Setup complete!
 echo   Activate venv : .venv\Scripts\activate
-echo   Run the API   : .venv\Scripts\python -m uvicorn scraper_api.main:app --reload
+echo   Run the API   : .venv\Scripts\python -m uvicorn scraper_api.main:app --port 8003 --reload
 echo   Run tests     : .venv\Scripts\python -m pytest
 echo.
 pause

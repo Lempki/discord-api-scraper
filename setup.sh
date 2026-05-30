@@ -34,7 +34,7 @@ fi
 echo
 echo "Setup complete!"
 echo "  Activate venv : source .venv/bin/activate"
-echo "  Run the API   : .venv/bin/python -m uvicorn scraper_api.main:app --reload"
+echo "  Run the API   : .venv/bin/python -m uvicorn scraper_api.main:app --port 8003 --reload"
 echo "  Run tests     : .venv/bin/python -m pytest"
 echo
 read -rp "Press Enter to close..."

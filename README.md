@@ -33,7 +33,7 @@ All endpoints except `/health` require a bearer token in the `Authorization` hea
 
 ### POST /scrape/batch
 
-Accepts the same fields as `/scrape` except `url` is replaced with `urls`, a list of up to 20 URLs. Each URL gets its own job and its own `job_id` in the response array.
+Accepts the same fields as `/scrape` except `url` is replaced with `urls`, a list of up to 20 URLs. The `follow_links` field is not supported for batch jobs. Each URL is always scraped shallowly and gets its own job as well as its own `job_id` in the response array.
 
 ### GET /scrape/{job_id}
 
